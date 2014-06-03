@@ -1,0 +1,7 @@
+package com.hackbulgaria.OOPIntro;
+
+public interface Animal {
+    void bark();
+    void eat();
+    void sleep();
+}

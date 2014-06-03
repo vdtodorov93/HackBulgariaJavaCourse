@@ -1,0 +1,5 @@
+1401797814389	Encapsulate field 'maxSpeed'
+1401799457824	Delete element
+1401799611702	Extract local variable 'instance'
+1401799911410	Encapsulate field 'first'
+1401799917899	Encapsulate field 'second'

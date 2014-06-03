@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="FilePathReducerTestCase" project="TDDIntro" tests="6" started="6" failures="0" errors="0" ignored="0">
+  <testsuite name="com.ahckbulgaria.corejaba.tddintro.FilePathReducerTestCase" time="0.002">
+    <testcase name="testWithManyDots" classname="com.ahckbulgaria.corejaba.tddintro.FilePathReducerTestCase" time="0.0"/>
+    <testcase name="testWithHome" classname="com.ahckbulgaria.corejaba.tddintro.FilePathReducerTestCase" time="0.001"/>
+    <testcase name="testWithLongNotReducedPath" classname="com.ahckbulgaria.corejaba.tddintro.FilePathReducerTestCase" time="0.0"/>
+    <testcase name="TestWithNeighbourDots" classname="com.ahckbulgaria.corejaba.tddintro.FilePathReducerTestCase" time="0.0"/>
+    <testcase name="testWithDashes" classname="com.ahckbulgaria.corejaba.tddintro.FilePathReducerTestCase" time="0.0"/>
+    <testcase name="testWithManyDashes" classname="com.ahckbulgaria.corejaba.tddintro.FilePathReducerTestCase" time="0.001"/>
+  </testsuite>
+</testrun>

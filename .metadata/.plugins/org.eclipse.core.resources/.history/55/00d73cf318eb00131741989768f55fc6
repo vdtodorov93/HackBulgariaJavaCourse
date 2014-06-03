@@ -1,0 +1,14 @@
+package com.hackbulgaria.oopfun;
+
+public class Car {
+    
+    private int maxSpeed;
+    
+    @Override
+    public String toString() {
+        return "Car";
+    } 
+    
+    
+
+}

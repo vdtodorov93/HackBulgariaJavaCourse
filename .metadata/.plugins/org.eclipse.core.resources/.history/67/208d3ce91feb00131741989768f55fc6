@@ -1,0 +1,32 @@
+package com.hackbulgaria.oopfun;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class DateTestCase {
+
+    Pair myPair;
+    @Before
+    public void setUp() throws Exception {
+        Pair myPair = new Pair("IVO", 7.5);
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void testPairWithStringAndDouble() {
+        
+        assertEquals("first:IVO second:7.5", myPair.toString());
+    }
+    
+    @Test
+    public void testPairGetterAndSetter(){
+        
+    }
+
+}
