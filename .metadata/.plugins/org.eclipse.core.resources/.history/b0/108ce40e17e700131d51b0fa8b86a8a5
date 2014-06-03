@@ -1,0 +1,25 @@
+
+public class Test {
+    public static void main(String[] args){
+//        int[][] doubleArray = new int[5][4];
+//        int[][] doubleArr = new int[5][];
+//        for(int i = 0; i < doubleArr.length; i++){
+//            doubleArr[i] = new int[4];
+//        }
+//        
+//        System.out.println(Integer.class);
+        
+        Object a = 3;
+        if(a instanceof Integer){
+            System.out.println("AAA");
+        }
+        
+        if(a.getClass().isAssignableFrom(Integer.class)){
+            System.out.println("BBBB");
+        }
+        
+        
+        String str = "AZZZZZ";
+        System.out.println(str);
+    }
+}

@@ -1,0 +1,13 @@
+package com.hackbulgaria.corejava.tddintro;
+
+public class StringShimMethods {
+    public static String stichMeUp(String glue, String... args){
+        return "MUHAHA";
+    }
+    
+    
+    
+    
+    
+    
+}

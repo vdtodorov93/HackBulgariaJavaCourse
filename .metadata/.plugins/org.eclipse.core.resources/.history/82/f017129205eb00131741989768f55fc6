@@ -1,0 +1,8 @@
+package com.hackbulgaria.corejava.tddintro;
+
+public class MaximumScalar {
+    public static long maxScalarSumProduct(int[]a, int[]b){
+        return -1;
+    }
+
+}

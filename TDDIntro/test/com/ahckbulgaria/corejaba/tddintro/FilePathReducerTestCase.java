@@ -1,0 +1,50 @@
+package com.ahckbulgaria.corejaba.tddintro;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import com.hackbulgaria.corejava.tddintro.FilePathReducer;
+
+public class FilePathReducerTestCase {
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
+    }
+
+    @Test
+    public void testWithHome() {
+        assertEquals("/", FilePathReducer.ReduceFilePath("/srv/../"));
+    }
+    
+    @Test
+    public void testWithLongNotReducedPath() {
+        assertEquals("/srv/www/htdocs/wtf", FilePathReducer.ReduceFilePath("/srv/www/htdocs/wtf/"));
+    }
+    
+    @Test
+    public void testWithManyDashes() {
+        assertEquals("/", FilePathReducer.ReduceFilePath("///dev//../////"));
+    }
+    
+    @Test
+    public void testWithDashes() {
+        assertEquals("/", FilePathReducer.ReduceFilePath("/../"));
+    }
+    
+    @Test
+    public void testWithManyDots(){
+        assertEquals("/", FilePathReducer.ReduceFilePath("/etc/../etc/../etc/../"));
+    }
+    
+    @Test
+    public void TestWithNeighbourDots(){
+        assertEquals("/", FilePathReducer.ReduceFilePath("/etc/../../../../dev/../../"));
+    }
+}

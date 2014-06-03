@@ -1,0 +1,237 @@
+package com.hackbulgaria.corejava;
+
+import java.util.Arrays;
+
+public class Problems2Impl implements Problems2 {
+
+    @Override
+    public boolean isOdd(int number) {
+        return number % 2 != 0;
+    }
+
+    @Override
+    public boolean isPrime(int number) {
+        for(int i = 2; i <= Math.sqrt(number); i++){
+            if(number % i == 0) return false;
+        }
+        return true;
+    }
+
+    @Override
+    public int min(int... array) {
+        int minEl = array[0];
+        for(int i = 0; i < array.length; i++){
+            if(array[i] < minEl) minEl = array[i];
+        }
+        
+        return minEl;
+    }
+
+    @Override
+    public int kthMin(int k, int[] array) {
+        Arrays.sort(array);
+        return array[k-1];
+    }
+
+    @Override
+    public float getAverage(int[] array) {
+        int avg = 0;
+        for(int i = 0; i < array.length; i++){
+            avg += array[i];
+        }
+        
+        return avg / (float)array.length;
+    }
+
+    @Override
+    public long getSmallestMultiple(int upperBound) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public long getLargestPalindrome(long N) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int[] histogram(short[][] image) {
+        int[] hist = new int[256];
+        for(int i = 0; i < 256; i++) hist[i] = 0;
+        for(int i = 0; i < image.length; i++){
+            for(int j = 0; j < image[i].length; j++){
+                hist[image[i][j]]++;
+            }
+        }
+        
+        return hist;
+    }
+
+    @Override
+    public long doubleFac(int n) {
+        int result = 1;
+        for(int i = 2; i <= n; i++){
+            result *= i;
+        }
+        int resultFact = 1;
+        for(int i = 2; i <= result; i++){
+            resultFact *= i;
+        }
+        return resultFact ;
+    }
+
+    @Override
+    public long kthFac(int k, int n) {
+        long result = 1;
+        long copyN = n;
+        for(int i = 0; i < k; i++){
+            for(int j = 2; j <= copyN; j++){
+                result *= j;
+            }
+            copyN = result;
+            result = 1;
+        }
+        
+        return copyN;
+    }
+
+    @Override
+    public int getOddOccurrence(int[] array) {
+        int result = array[0];
+        for(int i = 1; i < array.length; i++){
+            result = result ^ array[i];
+        }
+        
+        return result;
+    }
+
+    private long powHelper(int a, int b){
+        if(b == 0) return 1;
+        if(b == 1) return a;
+        if(b == 2) return a * a;
+        
+//        if(pows[b/2] == -1) pows[b/2] = powHelper(a, b/2, pows);
+//        if(pows[b - b/2] == -1) pows[b - b/2] = powHelper(a, b - b/2, pows);
+//        return pows[b/2] * pows[b - b/2];
+        long square = powHelper(a, b/2);
+        square = square * square;
+        if(isOdd(b))
+        {
+            return a * square;
+        }
+        else return square;
+    }
+    
+    @Override
+    public long pow(int a, int b) {
+        return powHelper(a, b);
+    }
+
+    @Override
+    public long maximalScalarSum(int[] a, int[] b) {
+        
+        return 0;
+    }
+
+    @Override
+    public int maxSpan(int[] array) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public boolean canBalance(int[] array) {
+        int left = 0;
+        int sumLeft = array[0];
+        int sumRight = array[array.length - 1];
+        int right = array.length - 1;
+        while(left <= right){
+            if(sumLeft < sumRight){
+                left++;
+                sumLeft += array[left];
+            }
+            else{
+                right--;
+                sumRight += array[right];
+            }
+        }
+        
+        return sumLeft == sumRight;
+    }
+
+    @Override
+    public int[][] rescale(int[][] original, int newWidth, int newHeight) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public String reverseMe(String argument) {
+        return new StringBuilder(argument).reverse().toString();
+    }
+
+    @Override
+    public String copyEveryChar(String input, int k) {
+        StringBuilder result = new StringBuilder();
+        for(int i = 0; i < input.length(); i++){
+            for(int j = 0; j < k; j++) result.append(input.charAt(i));
+        }
+        return result.toString();
+    }
+
+    @Override
+    public String reverseEveryWord(String arg) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public boolean isPalindrome(String argument) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean isPalindrome(int number) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public int getPalindromeLength(String input) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public int countOcurrences(String needle, String haystack) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public String decodeURL(String input) {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public int sumOfNumbers(String input) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public boolean areAnagrams(String A, String B) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean hasAnagramOf(String string, String string2) {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+}

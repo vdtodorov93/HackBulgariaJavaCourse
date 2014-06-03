@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="MaximumScalarProductTestCase" project="TDDIntro" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.ahckbulgaria.corejaba.tddintro.MaximumScalarProductTestCase" time="0.0">
+    <testcase name="tstandartTest" classname="com.ahckbulgaria.corejaba.tddintro.MaximumScalarProductTestCase" time="0.0"/>
+    <testcase name="testWithNegatives" classname="com.ahckbulgaria.corejaba.tddintro.MaximumScalarProductTestCase" time="0.0"/>
+    <testcase name="testWithZeros" classname="com.ahckbulgaria.corejaba.tddintro.MaximumScalarProductTestCase" time="0.0"/>
+  </testsuite>
+</testrun>

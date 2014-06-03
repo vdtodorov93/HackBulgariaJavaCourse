@@ -1,0 +1,39 @@
+package com.hackbulgaria.corejava.tddintro;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+public class FilePathReducer {
+    public static String ReduceFilePath(String path){
+        String[] directories = path.split("/");
+        String[] dirs = new String[directories.length];
+        int dirsSize = 0;
+        for(int i = 0; i < directories.length; i++){
+            if(directories[i].equals(".") || directories[i].equals("") || directories[i].equals("/")){
+                continue;
+            }
+            else if(directories[i].equals("..")){
+                if(dirsSize > 0){
+                    dirsSize--;
+                }
+            }
+            else{
+                dirs[dirsSize] = directories[i];
+                dirsSize++;
+            }
+        }
+        
+        
+        StringBuilder result = new StringBuilder();
+        result.append("/");
+        for(int i = 0; i < dirsSize - 1; i++){
+            result.append(dirs[i]);
+            result.append("/");
+        }
+        if(dirsSize > 0){
+            result.append(dirs[dirsSize - 1]);
+        }
+        return result.toString();
+    }
+
+}

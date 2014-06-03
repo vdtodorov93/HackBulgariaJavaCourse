@@ -1,0 +1,77 @@
+package com.hackbulgaria.helloworld;
+
+import java.util.Arrays;
+
+public class A {
+    public static void main(String[] args) {
+        for(int i = 2; i < 15; i++){
+            System.out.println(i + " is prime? " + isPrime(i));
+        }
+        
+//        int[] array = {1, 6, 3, -100, 7};
+//        System.out.println("the min of the array is: " + min(array));
+//        System.out.println("the 2nd least element of the array is: " + kthMin(2, array));
+//        for(int i = 0; i < array.length; i++) System.out.println(array[i]);
+//        System.out.println("The avg of the arr: " + getAverage(array));
+//        System.out.println("the factorial of 5: " + factorial(3));
+        System.out.println("kth fact of 2, 3 is: " + kthFac(2, 3));
+    }
+    
+    private static boolean isPrime(int N){
+        //for(int i = 2; i < N/2; i++){
+            for(int i = 2; i <= Math.sqrt(N); i++){
+            if(N % i == 0) return false;
+        }
+                
+        return true;
+    }
+    
+    private static int kthMin(int k, int[] arr){
+        Arrays.sort(arr);
+        return arr[k - 1];
+    }
+    
+    private static int min(int arr[]){
+        int min = arr[0];
+        for(int i = 0; i < arr.length; i++){
+            if(min > arr[i]) min = arr[i];
+        }
+        return min;
+    }
+    
+    private static int getAverage(int arr[]){
+        int avg = 0;
+        for(int i = 0; i < arr.length; i++){
+            avg += arr[i];
+        }
+        
+        return avg / arr.length;
+    }
+    
+    private static double factorial(int N){
+        int result = 1;
+        for(int i = 2; i <= N; i++){
+            result *= i;
+        }
+        int resultFact = 1;
+        for(int i = 2; i <= result; i++){
+            resultFact *= i;
+        }
+        return resultFact ;
+    }
+    
+    private static long kthFac(int k, long n){
+        long result = 1;
+        for(int i = 0; i < k; i++){
+            for(int j = 2; j <= n; j++){
+                result *= j;
+            }
+            n = result;
+            result = 1;
+        }
+        
+        return n;
+    }
+    
+    
+}
