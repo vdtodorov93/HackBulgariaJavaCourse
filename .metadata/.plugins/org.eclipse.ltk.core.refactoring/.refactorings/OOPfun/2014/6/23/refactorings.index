@@ -3,3 +3,7 @@
 1401799611702	Extract local variable 'instance'
 1401799911410	Encapsulate field 'first'
 1401799917899	Encapsulate field 'second'
+1401963604718	Encapsulate field 'data'
+1401963609981	Encapsulate field 'prev'
+1401963615689	Encapsulate field 'next'
+1401966579480	Rename type 'DateTestCase'

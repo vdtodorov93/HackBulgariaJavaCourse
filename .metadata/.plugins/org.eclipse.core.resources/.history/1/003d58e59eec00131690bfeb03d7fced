@@ -1,0 +1,129 @@
+package com.hackbulgaria.oopfun;
+
+public class DoubleLinkedListImpl implements DoubleLinkedList {
+    private class ListNode{
+        private int data;
+        private ListNode prev;
+        private ListNode next;
+        
+        public ListNode(int data, ListNode prev, ListNode next){
+            this.data = data;
+            this.prev = prev;
+            this.next = next;
+        }
+        
+        public int getData() {
+            return data;
+        }
+        
+        public void setData(int data) {
+            this.data = data;
+        }
+        
+        public ListNode getPrev() {
+            return prev;
+        }
+        
+        public void setPrev(ListNode prev) {
+            this.prev = prev;
+        }
+        
+        public ListNode getNext() {
+            return next;
+        }
+        
+        public void setNext(ListNode next) {
+            this.next = next;
+        }        
+    }
+    
+    private ListNode head;
+    private ListNode tail;
+    private int size;
+    
+    public DoubleLinkedListImpl() {
+        size = 0;
+        head=null;
+        tail=null;
+    }
+    
+    @Override
+    public int getHead(){
+        if(size == 0){
+            return 0;
+        }
+        return head.getData();
+    }
+
+    @Override
+    public int getTail() {
+        if(size == 0){
+            return 0;
+        }
+        return tail.getData();
+    }
+
+    @Override
+    public void addHead(int element) {
+        if(size == 0){
+            head = new ListNode(element, null, null);
+            tail = head;
+        }
+        else {
+            ListNode newHead = new ListNode(element, null, head);
+            head.setPrev(newHead);
+            head = newHead;
+        }
+        size++;
+    }
+
+    @Override
+    public void addTail(int element) {
+        if(size == 0){
+            tail = new ListNode(element, null, null);
+            head = tail;
+        }
+        else {
+            ListNode newTail = new ListNode(element, tail, null);
+            tail.setNext(newTail);
+            tail = newTail;
+        }
+        size++;
+    }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
+    @Override
+    public int get(int elementIndex) {
+        if(size <= elementIndex){
+            return 0;
+        }
+        ListNode copy = head;
+        for(int i = 0; i < elementIndex; i++){
+            copy = head.getNext();
+        }
+        return copy.getData();
+    }
+
+    @Override
+    public boolean popHead() {
+        if(size == 0){
+            return false;
+        }
+        
+        return true;
+    }
+
+    @Override
+    public boolean popTail() {
+        if(size == 0){
+            return false;
+        }
+        
+        return true;
+    }
+
+}

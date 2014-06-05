@@ -1,0 +1,33 @@
+package com.hackbulgaria.oopfun;
+
+public class SmartStack {
+    private Object[] data;
+    private int size;
+    private int capacity;
+    
+    public SmartStack(int capacity){
+        this.capacity = capacity;
+        data = new Object[capacity];
+        size = 0;        
+    }
+    
+    public boolean push(Object element){
+        return false;
+    }
+    
+    public boolean isEmpty(){
+        return true;
+    }
+    
+    public boolean pop(){
+        return false;
+    }
+    
+    public Object top() throws Exception{
+        if(isEmpty()){
+            throw new Exception("Stack is empty");
+        }
+        
+        return data[size - 1];
+    }
+}

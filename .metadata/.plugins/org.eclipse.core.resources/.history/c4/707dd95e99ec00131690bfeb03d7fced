@@ -1,0 +1,44 @@
+package com.hackbulgaria.oopfun;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class SmartStackTestCase {
+    SmartStack stack;
+    @Before
+    public void setUp() throws Exception {
+        stack = new SmartStack(10);
+        for(int i = 0; i < 5; i++){
+            stack.push(i);
+            stack.push("ftw");
+        }
+    }
+
+    @Test
+    public void testPopAllElements() {
+        assertFalse(stack.isEmpty());
+        assertFalse(stack.push(10));
+        for(int i = 4; i >= 0; i--){
+            try {
+                String ftw = (String)stack.top();
+                stack.pop();
+                assertEquals("ftw", ftw);                
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            try {
+                int num = (int)stack.top();
+                stack.pop();
+                assertEquals(i, num);
+            } catch (Exception e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }            
+        }
+        assertTrue(stack.isEmpty());
+    }
+
+}

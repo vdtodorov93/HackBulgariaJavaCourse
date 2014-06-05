@@ -1,0 +1,105 @@
+package com.hackbulgaria.oopfun;
+
+public class DoubleLinkedListImpl implements DoubleLinkedList {
+    private class ListNode{
+        private int data;
+        private ListNode prev;
+        private ListNode next;
+        
+        public ListNode(int data, ListNode prev, ListNode next){
+            this.data = data;
+            this.prev = prev;
+            this.next = next;
+        }
+        
+        public int getData() {
+            return data;
+        }
+        
+        public void setData(int data) {
+            this.data = data;
+        }
+        
+        public ListNode getPrev() {
+            return prev;
+        }
+        
+        public void setPrev(ListNode prev) {
+            this.prev = prev;
+        }
+        
+        public ListNode getNext() {
+            return next;
+        }
+        
+        public void setNext(ListNode next) {
+            this.next = next;
+        }        
+    }
+    
+    private ListNode head;
+    private ListNode tail;
+    private int size;
+    
+    public DoubleLinkedListImpl() {
+        size = 0;
+        head=null;
+        tail=null;
+    }
+    
+    @Override
+    public int getHead(){
+        if(size == 0){
+            return 0;
+        }
+        return head.getData();
+    }
+
+    @Override
+    public int getTail() {
+        if(size == 0){
+            return 0;
+        }
+        return tail.getData();
+    }
+
+    @Override
+    public void addHead(int element) {
+        if(size == 0){
+            head = new ListNode(element, null, null);
+            tail = head;
+        }
+        else head.setPrev(new ListNode(element, null, head));
+        head = head.getPrev();
+    }
+
+    @Override
+    public void addTail(int element) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public int size() {
+        return size;
+    }
+
+    @Override
+    public int get(int elementIndex) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
+
+    @Override
+    public boolean popHead() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+    @Override
+    public boolean popTail() {
+        // TODO Auto-generated method stub
+        return false;
+    }
+
+}
