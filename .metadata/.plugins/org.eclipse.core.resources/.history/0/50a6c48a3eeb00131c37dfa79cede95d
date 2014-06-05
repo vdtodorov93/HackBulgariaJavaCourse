@@ -6,17 +6,16 @@ public class MainFunc {
 //        interactWithAnimal(doggy);
 //        Cat cat = new Cat();
 //        interactWithAnimal(cat);
-        for(int i = 1; i <= 20000; i++){
+        for(int i = 1; i <= 200000; i++){
             if(isDone(i)){
                 System.out.println(i);
-                //break;
+                break;
             }
         }
     }
     
     private static boolean isDone(int number){
         boolean[] used = new boolean[10];
-        used[0] = true;
         int usedDigs = 0;
         int copyN = number;
         int digits[] = new int[10];

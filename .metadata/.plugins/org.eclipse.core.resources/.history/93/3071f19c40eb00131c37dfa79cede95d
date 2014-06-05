@@ -16,7 +16,6 @@ public class MainFunc {
     
     private static boolean isDone(int number){
         boolean[] used = new boolean[10];
-        used[0] = true;
         int usedDigs = 0;
         int copyN = number;
         int digits[] = new int[10];
