@@ -1,0 +1,12 @@
+package com.hackbulgaria.collectionsfun;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class FindDublicatesInSets {
+    public static <T> Set<T> findFublicates(Set<T>... sets){
+        Set<T> result = new HashSet<T>();
+        return result;
+    }
+
+}

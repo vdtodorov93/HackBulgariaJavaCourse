@@ -1,0 +1,36 @@
+package com.hackbulgaria.collectionsfun;
+
+import static org.junit.Assert.*;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class FindDublicatesInSetsTestCase {
+
+    HashSet<Integer> a, b;
+    @Before
+    public void setUp() throws Exception {
+        a = new HashSet<>();
+        b = new HashSet<>();
+    }
+
+    @Test
+    public void test() {
+        a.add(2);
+        a.add(3);
+        a.add(4);
+        
+        b.add(3);
+        b.add(5);
+        
+        Set<Integer> result = FindDublicatesInSets.findFublicates(a, b);
+        assertFalse(result.contains(2));
+        assertTrue(result.contains(3));
+        assertFalse(result.contains(4));
+        assertFalse(result.contains(5));
+    }
+
+}
