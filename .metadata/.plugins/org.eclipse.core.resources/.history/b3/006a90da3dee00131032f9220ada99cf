@@ -1,0 +1,53 @@
+package com.hackbulgaria.collectionsfun;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class RotateElementsOfCollectionTestCase {
+    Collection<Integer> coll;
+    
+    @Before
+    public void setUp() throws Exception {
+        coll = new ArrayList<>();
+        for(int i = 2; i <= 4; i++){
+            coll.add(i);
+        }
+    }
+
+    @Test
+    public void trivialTest() {
+        RotateElementsOfCollection.rotate(coll);
+        Iterator<Integer> it = coll.iterator();
+        assertTrue(it.hasNext());
+        assertEquals(4, (int)it.next());
+        assertTrue(it.hasNext());
+        assertEquals(2, (int)it.next());
+        assertTrue(it.hasNext());
+        assertEquals(3, (int)it.next());
+        assertFalse(it.hasNext());
+    }
+
+    @Test
+    public void testWithStrings(){
+        Collection<String> strings = new LinkedList<String>();
+        strings.add("baba");
+        strings.add("eggs");
+        strings.add("span");
+        RotateElementsOfCollection.rotate(coll);
+        RotateElementsOfCollection.rotate(coll);
+        Iterator<String> it = strings.iterator();
+        assertEquals("span", it.next());
+        assertEquals("baba", it.next());
+        assertEquals("eggs", it.next());
+        
+        
+    }
+}

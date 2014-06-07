@@ -1,0 +1,27 @@
+package com.hackbulgaria.collectionsfun;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class RotateElementsOfCollection {
+    public static <T> void rotate(Collection<T> coll){
+        if(coll.size() == 0) return;
+//        
+//        Queue<T> elements = new LinkedList<>();
+//        Iterator<T> it = coll.iterator();
+//        T lastElement;
+//        do{
+//            lastElement = it.next();
+//        } while(it.hasNext());
+//        
+//        elements.add(lastElement);
+//        it = coll.iterator();
+//        while()
+        T[] elements = null;
+        elements = coll.toArray(elements);
+        
+    }
+
+}
