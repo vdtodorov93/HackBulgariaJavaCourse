@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PairTestCase" project="OOPfun" tests="5" started="5" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hackbulgaria.oopfun.PairTestCase" time="0.0">
+    <testcase name="testPairEquals" classname="com.hackbulgaria.oopfun.PairTestCase" time="0.0"/>
+    <testcase name="testPairGetter" classname="com.hackbulgaria.oopfun.PairTestCase" time="0.0"/>
+    <testcase name="testPairSetter" classname="com.hackbulgaria.oopfun.PairTestCase" time="0.0"/>
+    <testcase name="testPairWithStringAndDouble" classname="com.hackbulgaria.oopfun.PairTestCase" time="0.0"/>
+    <testcase name="testPairEqualsStrings" classname="com.hackbulgaria.oopfun.PairTestCase" time="0.0"/>
+  </testsuite>
+</testrun>

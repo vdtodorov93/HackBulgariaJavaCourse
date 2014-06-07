@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Rerun com.hackbulgaria.oopfun.MatrixTestCase" project="OOPfun" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hackbulgaria.oopfun.MatrixTestCase" time="0.001">
+    <testcase name="testToString" classname="com.hackbulgaria.oopfun.MatrixTestCase" time="0.001"/>
+    <testcase name="testAddTwo" classname="com.hackbulgaria.oopfun.MatrixTestCase" time="0.0"/>
+  </testsuite>
+</testrun>

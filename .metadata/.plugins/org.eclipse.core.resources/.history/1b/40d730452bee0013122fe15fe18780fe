@@ -1,0 +1,8 @@
+package com.hackbulgaria.collectionsfun;
+
+public class Brackets {
+    public static boolean checkExpression(String expr){
+        return true;
+    }
+
+}

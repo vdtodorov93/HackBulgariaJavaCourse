@@ -1,0 +1,33 @@
+package com.hackbulgaria.oopfun;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class MatrixTestCase {
+
+    int[][] m;
+    Matrix mat;
+    @Before
+    public void setUp() throws Exception {
+        m = new int[][]{{1, 2, 3}, {4, 5, 6}};
+        mat = new Matrix(2, 3, m);
+    }
+
+    @Test
+    public void testToString() {
+        String matcher = "1 2 3 \n4 5 6 \n";
+        assertEquals(matcher, mat.toString());
+    }
+    
+    @Test
+    public void testAddTwo(){
+        assertEquals(2, mat.getPixel(0, 2));
+        assertEquals(5, mat.getPixel(1, 1));
+        mat.operate(new AddTwoToMatrix());
+        assertEquals(4, mat.getPixel(0, 2));
+        assertEquals(7, mat.getPixel(1, 1));
+    }
+
+}

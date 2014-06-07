@@ -7,3 +7,4 @@
 1401963609981	Encapsulate field 'prev'
 1401963615689	Encapsulate field 'next'
 1401966579480	Rename type 'DateTestCase'
+1401969186342	Encapsulate field 'matrix'

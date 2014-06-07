@@ -1,0 +1,10 @@
+package com.hackbulgaria.collectionsfun;
+
+import java.util.Collection;
+
+public class ReverseCollection {
+    public static void reverseInPlace(Collection<? extends Object> col){
+        return;
+    }
+
+}

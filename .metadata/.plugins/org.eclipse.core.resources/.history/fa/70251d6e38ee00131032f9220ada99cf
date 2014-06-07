@@ -1,0 +1,27 @@
+package com.hackbulgaria.collectionsfun;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class BoundedQueueTestCase {
+    BoundedQueue<Integer> q;
+    
+    @Before
+    public void setUp() throws Exception {
+        q = new BoundedQueue<>(4);
+        for(int i = 0; i < 4; i++){
+            q.add(i);
+        }
+    }
+
+    @Test
+    public void test() {
+        assertEquals(3, (int)q.peek());
+        q.add(4);
+        assertEquals(4, (int)q.peek());
+        assertEquals(4, q.size());
+    }
+
+}

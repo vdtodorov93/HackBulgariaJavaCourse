@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="BoundedQueueTestCase" project="Collections1" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.hackbulgaria.collectionsfun.BoundedQueueTestCase" time="0.001">
+    <testcase name="testAdd" classname="com.hackbulgaria.collectionsfun.BoundedQueueTestCase" time="0.001"/>
+    <testcase name="testIterator" classname="com.hackbulgaria.collectionsfun.BoundedQueueTestCase" time="0.0"/>
+  </testsuite>
+</testrun>

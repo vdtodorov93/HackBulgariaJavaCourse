@@ -1,0 +1,27 @@
+package com.hackbulgaria.collectionsfun;
+
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.Collection;
+
+import org.junit.Test;
+
+public class ReverseCollectionTestCase {
+
+    @Test
+    public void testReverseTrivial() {
+        Collection<Integer> myCol = new ArrayList<>();
+        for(int i = 0; i < 5; i++){
+            myCol.add(i);
+        }
+        ReverseCollection.reverseInPlace(myCol);
+        Integer currentEl = 4;
+        for(Integer element: myCol){
+            assertEquals(currentEl, element);
+            currentEl--;
+        }
+        assertEquals(-1, (int)currentEl);
+    }
+
+}

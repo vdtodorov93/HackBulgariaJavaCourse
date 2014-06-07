@@ -1,0 +1,7 @@
+package com.hackbulgaria.collectionsfun;
+
+import java.util.Collection;
+
+public class OnOffCollection implements Collection<E> {
+
+}

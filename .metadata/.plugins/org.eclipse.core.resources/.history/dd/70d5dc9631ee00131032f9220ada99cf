@@ -1,0 +1,27 @@
+package com.hackbulgaria.collectionsfun;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class OnOffCollectionTestCase {
+
+    OnOffCollection<Integer> myOnOff;
+    
+    @Before
+    public void setUp() throws Exception {
+        myOnOff = new OnOffCollection<>();
+        for(int i = 2; i <= 10; i++){
+            myOnOff.add(i);
+        }
+    }
+
+    @Test
+    public void testAddAllreadyAddedElement() {
+        assertTrue(myOnOff.contains(2));
+        assertFalse(myOnOff.add((Integer)2));
+        assertFalse(myOnOff.contains(2));
+    }
+
+}

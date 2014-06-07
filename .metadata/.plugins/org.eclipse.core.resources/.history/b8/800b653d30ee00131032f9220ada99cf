@@ -1,0 +1,9 @@
+package com.hackbulgaria.collectionsfun;
+
+import java.util.Collection;
+import java.util.Collections;
+
+public class OnOffCollection implements Collections{
+    
+
+}

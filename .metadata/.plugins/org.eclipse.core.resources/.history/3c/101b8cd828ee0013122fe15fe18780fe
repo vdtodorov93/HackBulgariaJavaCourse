@@ -1,0 +1,9 @@
+package com.hackbulgaria.collectionsfun;
+
+public class MainFunc {
+    public static void main(String[] args){
+        System.out.println("AZ");
+        System.out.println("AAZ");
+    }
+
+}
