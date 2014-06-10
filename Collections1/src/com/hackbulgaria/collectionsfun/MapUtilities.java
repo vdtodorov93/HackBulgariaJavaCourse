@@ -2,6 +2,7 @@ package com.hackbulgaria.collectionsfun;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class MapUtilities {
     public static String hashToHumanReadable(HashMap<? extends Object, ? extends Object> map){
@@ -24,5 +25,29 @@ public class MapUtilities {
         }
         
         return occurancesCounter;
+    }
+    
+    public static String applyCipher(Map<Character, Character> cipher, String bullshit){
+        for(Character c: cipher.keySet()){
+            bullshit = bullshit.replace(c, cipher.get(c));
+        }
+        return bullshit;
+    }
+    
+    public static String decrypt(String bullshit){
+        bullshit = bullshit.toLowerCase();
+        HashMap<Character, Integer> histo = new HashMap<>();
+        
+        for(int i = 0; i < bullshit.length(); i++){
+            
+            Character c = bullshit.charAt(i);
+            if (c == ' ') continue;
+            if(histo.get(c) == null){
+                histo.put(c, 1);
+            }
+            else histo.put(c, histo.get(c) + 1);
+        }
+        System.out.println(hashToHumanReadable(histo));
+        return "M";
     }
 }
