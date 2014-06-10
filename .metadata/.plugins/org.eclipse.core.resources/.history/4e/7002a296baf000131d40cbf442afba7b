@@ -1,0 +1,14 @@
+package com.hackbulgaria.collectionsfun;
+
+import java.util.HashMap;
+
+public class MapUtilities {
+    public static String hashToHumanReadable(HashMap<? extends Object, ? extends Object> map){
+        StringBuilder builder = new StringBuilder();
+        for(Object key: map.keySet()){
+            builder.append(key.toString() + ":" + map.get(key).toString() + " ");
+        }
+        
+        return builder.toString();
+    }
+}
