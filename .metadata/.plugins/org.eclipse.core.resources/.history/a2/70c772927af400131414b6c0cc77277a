@@ -41,12 +41,5 @@ public class UtilityTestCase {
         assertEquals(7, (int)result.get(3));
         assertEquals(7, (int)intList.get(2));
     }
-    
-    @Test
-    public void testMonotonic(){
-        assertTrue(Utility.checkForMonotonic(Arrays.asList(1,2,3,4,5,6)));
-        assertTrue(Utility.checkForMonotonic(Arrays.asList(6,5,4,3,2,1,1,1)));
-        assertFalse(Utility.checkForMonotonic(Arrays.asList(1,2,1,4,5,4)));
-    }
 
 }

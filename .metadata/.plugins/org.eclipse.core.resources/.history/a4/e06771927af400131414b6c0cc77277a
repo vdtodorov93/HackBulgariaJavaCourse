@@ -26,9 +26,5 @@ public class Utility {
         Collections.sort(result);
         return result;
     }
-    
-    public static <T extends Comparable<T>> boolean checkForMonotonic(List<T> list){
-        return list.equals(sort(list)) || list.equals(reverse(sort(list)));
-    }
 
 }
