@@ -1,0 +1,5 @@
+package com.hackbulgaria.exam1;
+
+public class DateLogger extends Logger {
+
+}

@@ -1,0 +1,31 @@
+package com.hackbulgaria.exam1;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+public class DateLogger extends Logger {
+    public DateLogger(int level){
+        super(level);
+    }
+    
+    public DateLogger(){
+    }
+    
+    @Override
+    public void log(int level, String message){
+        checkValidLevel(level);
+        if(level <= this.level){
+            Calendar now = GregorianCalendar.getInstance();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss"); 
+            System.out.println(dateFormat.format(now));
+            System.out.println(message);
+        }
+    }
+    
+    @Override
+    public void log(String message){
+        log(defaultLevel, message);
+    }
+
+}
