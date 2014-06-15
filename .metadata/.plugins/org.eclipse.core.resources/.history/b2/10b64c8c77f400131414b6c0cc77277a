@@ -1,0 +1,29 @@
+package com.hackbulgaria.exam1;
+
+import static org.junit.Assert.*;
+
+import java.util.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class ReverseTestCase {
+    List<String> list;
+
+    @Before
+    public void setUp() throws Exception {
+        list = new ArrayList<>();
+    }
+
+    @Test
+    public void test() {
+        list.add("AAA");
+        list.add("BBB");
+        list.add("CCC");
+        list = Utility.reverse(list);
+        assertEquals("CCC", list.get(0));
+        assertEquals("BBB", list.get(1));
+        assertEquals("AAA", list.get(2));
+    }
+
+}
