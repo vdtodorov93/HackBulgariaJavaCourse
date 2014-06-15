@@ -1,0 +1,22 @@
+package com.hackbulgaria.exceptions1;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class XmlMarkupBuilderTestCase {
+    XmlMarkupBuilder testXml;
+
+    @Before
+    public void setUp() throws Exception {
+        testXml  = new XmlMarkupBuilder();
+    }
+
+    @Test
+    public void test() {
+        testXml.openTag("a").addAttr("href", "facebook.com").addText("Facebook").addAttr("basi", "ne").finish();
+        System.out.println(testXml.getResult());
+    }
+
+}

@@ -1,0 +1,18 @@
+package com.hackbulgaria.exceptions1;
+
+public class MainFunc {
+    public static void main(String[] args) {
+        try{
+            foo();
+        }catch(Exception e){
+            System.out.println(e.toString());
+        }
+    }
+    
+    public static void foo(){
+        if(1 < 2){
+            throw new DatabaseCorruptedException();
+        }
+    }
+
+}

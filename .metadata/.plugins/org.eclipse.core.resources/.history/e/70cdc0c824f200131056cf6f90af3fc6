@@ -1,0 +1,32 @@
+package com.hackbulgaria.exceptions1;
+
+import javax.management.ServiceNotFoundException;
+
+public class MainFunc {
+    public static void main(String[] args) {
+//        try{
+//            foo();
+//        }catch(Exception e){
+//            System.out.println(e.toString());
+//            System.out.println(e.getMessage());
+//            e.printStackTrace();
+//        }
+        try {
+            tryService();
+        } catch (ServiceNotAvailableAtTheMoment e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public static void foo(){
+        if(1 < 2){
+            throw new DatabaseCorruptedException();
+        }
+    }
+    
+    public static void tryService() throws ServiceNotAvailableAtTheMoment{
+        for(int i = 0; i < 10; i++);
+        throw new ServiceNotAvailableAtTheMoment("4upi se servera ebasi");
+    }
+
+}

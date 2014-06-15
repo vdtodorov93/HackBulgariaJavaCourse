@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.hackbulgaria.exceptions1.NotRetardedHashMap.isNullAllowed&apos; in &apos;com.hackbulgaria.exceptions1.NotRetardedHashMap&apos;&#x0A;- Original project: &apos;Exceptions1&apos;&#x0A;- Original element: &apos;com.hackbulgaria.exceptions1.NotRetardedHashMap.isNullAllowed&apos;&#x0A;- Getter method name: &apos;isNullAllowed&apos;&#x0A;- Setter method name: &apos;setNullAllowed&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;isNullAllowed&apos;" flags="589830" getter="isNullAllowed" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;com.hackbulgaria.exceptions1{NotRetardedHashMap.java[NotRetardedHashMap^isNullAllowed" insertion="0" setter="setNullAllowed" stamp="1402571903464" version="1.0" visibility="1"/>
+</session>

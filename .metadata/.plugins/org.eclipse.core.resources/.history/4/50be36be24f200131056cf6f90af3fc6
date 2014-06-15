@@ -1,0 +1,7 @@
+package com.hackbulgaria.exceptions1;
+
+import java.util.HashMap;
+
+public class NotRetardedHashMap extends HashMap<K, V> {
+
+}

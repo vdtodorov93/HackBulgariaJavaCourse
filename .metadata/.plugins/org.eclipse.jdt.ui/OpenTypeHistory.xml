@@ -2,4 +2,8 @@
 <typeInfoHistroy>
 <typeInfo handle="=Collections1/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(Collection.class[Collection" modifiers="1537" timestamp="1397769797000"/>
 <typeInfo handle="=Collections1/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(Queue.class[Queue" modifiers="1537" timestamp="1397769797000"/>
+<typeInfo handle="=Exceptions1/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(HashMap.class[HashMap" modifiers="33" timestamp="1397769797000"/>
+<typeInfo handle="=Exceptions1/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.lang(Exception.class[Exception" modifiers="33" timestamp="1397769797000"/>
+<typeInfo handle="=Exceptions1/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(ArrayList.class[ArrayList" modifiers="33" timestamp="1397769797000"/>
+<typeInfo handle="=Exceptions1/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.lang(RuntimeException.class[RuntimeException" modifiers="33" timestamp="1397769797000"/>
 </typeInfoHistroy>

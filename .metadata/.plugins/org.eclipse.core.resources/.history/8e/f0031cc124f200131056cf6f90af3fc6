@@ -1,0 +1,5 @@
+package com.hackbulgaria.exceptions1;
+
+public class NullValueAsKeyInHashException extends Exception {
+
+}

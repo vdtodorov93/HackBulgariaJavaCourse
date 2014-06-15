@@ -1,0 +1,100 @@
+package com.hackbulgaria.exceptions1;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Stack;
+
+public class XmlMarkupBuilder {
+    private StringBuilder xml;
+    private Stack<XmlElement> openedTags;
+    
+    private class XmlElement{
+        private String name;
+        private String text;
+        private ArrayList<String> attributes;
+        
+        public XmlElement(String name) {
+            attributes = new ArrayList<String>();
+            setName(name);
+        }
+        
+        public void setName(String name){
+            this.name = name + " ";
+        }
+        
+        public void addAttribute(String attrName, String value){
+            attributes.add(attrName + "=\"" + value + "\" ");
+        }
+        
+        public void addText(String text){
+            this.text = text;
+        }
+
+        @Override
+        public String toString() {
+            StringBuilder result = new StringBuilder();
+            result.append('\n');
+            result.append("<");
+            result.append(name);
+            for(String attr: attributes){
+                result.append(attr);
+            }
+            result.append('>');
+            result.append(text);
+            result.append("</");
+            result.append(name);
+            result.append('>');
+        
+            return result.toString();
+        }        
+    }
+    
+    private void CryIfEmpty(){
+        if(openedTags.isEmpty()){
+            throw new XmlBuilderException("There are not opened tags!");
+        }
+    }
+    
+    public XmlMarkupBuilder(){
+        xml = new StringBuilder();
+        openedTags = new Stack<XmlElement>();
+    }
+    
+    public XmlMarkupBuilder openTag(String tagName){
+        openedTags.push(new XmlElement(tagName));
+        return this;
+    }
+    
+    public XmlMarkupBuilder addAttr(String attrName, String attrValue){
+        CryIfEmpty();
+        openedTags.peek().addAttribute(attrName, attrValue);
+        return this;        
+    }
+    
+    public XmlMarkupBuilder addText(String text){
+        CryIfEmpty();
+        openedTags.peek().addText(text);
+        return this;
+    }
+    
+    public XmlMarkupBuilder closeTag(){
+        CryIfEmpty();
+        xml.append(openedTags.peek().toString());
+        openedTags.pop();
+        return this;
+    }    
+    
+    public XmlMarkupBuilder finish(){
+        while(!openedTags.empty()){
+            xml.append(openedTags.peek().toString());
+            openedTags.pop();
+        }
+        return this;
+    }
+    
+    public String getResult(){
+        return xml.toString();
+    }
+    
+
+}
